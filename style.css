@@ -1,0 +1,202 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    background-color: #16161f;
+    margin: 0;
+    font-family: "Arial Black";
+
+}
+.page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 20px;
+    font-size: 30px;
+    height: 15%;
+    color: #66FCF1;
+}
+.footer {
+    color: #66FCF1;
+    margin-top: auto;
+    background-color: #1F2833;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2vh;
+    text-align: center;
+}
+.pustota{
+    height: 2vh;
+}
+.site {
+    color: #66FCF1FF;
+    letter-spacing: 2px;
+}
+.vk{
+    color: #66FCF1;
+    cursor: pointer;
+    text-decoration: none;
+}
+.button-prikol{
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    padding: 1%;
+    letter-spacing: 3px;
+    user-select: none;
+    background: linear-gradient(to left, rgba(102, 252, 241, 0.83), #2399b4);
+    border-radius: 15px;
+    background-size: 200%;
+    transition: .5s;
+    height: 30px;
+    width: 300px;
+}
+.button-prikol:hover {
+    background-position: right;
+    box-shadow: 0 0 20px #32caee;
+}
+.prikolchik{
+    overflow: hidden;
+}
+.placeholder{
+}
+.pic {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-height: 50vh;
+    max-width: 100vh;
+}
+
+.feedback{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 100%;
+}
+.fixed{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    transition: 1s;
+}
+
+.button_like{
+    user-select: none;
+    border-radius: 15px;
+    height: 50px;
+    padding: 10px;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2.5s, hover .5s;
+}
+.button_dislike{
+    user-select: none;
+    cursor: pointer;
+    font-size: 30px;
+    height: 50px;
+    border-radius: 15px;
+    padding: 10px;
+    transition: opacity 2.5s, hover .5s;
+}
+.like:hover{
+    box-shadow: 0 0 20px #34e765;
+    transition-property: all;
+    transition-duration: .5s;
+}
+.dislike:hover{
+    box-shadow: 0 0 20px #ff4141;
+    transition-property: all;
+    transition-duration: .5s;
+}
+.dislike{
+    border-radius: 25px 5px 5px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: opacity 2.5s, hover .5s;
+}
+.dislike_info{
+    color: white;
+    text-align: center;
+    margin-right: 10px;
+    user-select: none;
+}
+.like{
+    border-radius: 5px 25px 25px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: opacity 2.5s, hover .5s;
+}
+.like_info{
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    user-select: none;
+}
+.hiden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 440px) {
+    body{
+        font-family: "Arial Black";
+    }
+    .pic {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-height: 60vh;
+        max-width: 40vh;
+    }
+    .header {
+        letter-spacing: 7px;
+        font-size: 25px;
+    }
+    .button-prikol{
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-family: "Arial Black";
+    }
+    .pic {
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        max-height: 60vh;
+        max-width: 40vh;
+    }
+    .header {
+        letter-spacing: 7px;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,96 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>html form</title>
+    <style>
+        .btn{
+            position: absolute;
+            left: 50%;
+        }
+
+    </style>
+</head>
+<body>
+
+<input id="get_prikol" type="submit" class="btn btn-primary" value="Получить ржаку"/>
+
+<img style = 'margin-top: 40px;'   id="prikol" src="">
+
+<script>
+
+
+
+    function sendPrikol() {
+        //pic.src = "/prikoli/prikol2.jpg";
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "/getPrikol", true);
+        xhr.send();
+        xhr.onload = function (){
+            pic.src = xhr.response;
+        }
+
+    }
+    let pic = document.getElementById('prikol');
+    let button = document.getElementById('get_prikol');
+    button.addEventListener("click", sendPrikol);
+
+
+
+
+
+
+
+
+
+    /*const place = document.querySelector('.mesto_dly_pic')
+    function setPrikol(src){
+        place.innerHTML = ''
+        const pic = document.createElement('img')
+        pic.src = src
+        place.append(pic)
+    }
+    const button2 = document.querySelector('.button2')
+    button2.addEventListener('click', () => {
+        setPrikol("/prikoli/prikol1.jpg")
+    })*/
+
+    /*get_prikol.onsubmit = function() {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open("POST", "/getPrikol", true);
+
+        xhr.send(JSON.stringify({message: this.elements.message.value}));
+
+        this.elements.message.value = '';
+
+        return false;
+    };*/
+</script>
+</body>
+</html>
+
+<!--
+<html>
+
+<head>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('createDirectory').addEventListener('click', function(e) {
+                fetch('/createDirectory').then(r => r.json()).then(r => {
+                    alert(r.created)
+                })
+            })
+        })
+    </script>
+</head>
+
+<body>
+<h1>Expressed</h1>
+<div id="status"></div>
+<form method="GET">
+    <input class="subscribe-button" type="submit" value="Получить прикол">
+</form>
+</body>
+
+</html>-->
