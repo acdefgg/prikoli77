@@ -3,7 +3,6 @@
 //
 
 const fs = require("fs");
-const file = require("./databased.json");
 
 function setFeedbackToDB(pic, feedback) {
     let file = require('./databased.json');
@@ -16,6 +15,7 @@ function setFeedbackToDB(pic, feedback) {
         file[pic][1] += 1;
     }
     fs.writeFileSync("databased.json", JSON.stringify(file));
+    return getFeedbackOfDB(pic);
 }
 
 function getFeedbackOfDB(pic) {
