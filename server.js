@@ -1,7 +1,7 @@
 const express = require('express');
 const prikoli = require('./prikols');
 const app = express();
-const database = require('./database2');
+const database = require('./database');
 const port = 3000;
 
 
