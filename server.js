@@ -2,7 +2,7 @@ const express = require('express');
 const prikoli = require('./prikols');
 const app = express();
 const database = require('./database');
-const port = 3000;
+const port = 80;
 
 
 app.use(express.static(__dirname));
