@@ -110,7 +110,7 @@ function _getFeedbackOfDB(pic){
 
 function _createPictureToDB(pic){
     return db.none(`INSERT INTO feedback (pic, likes, dislikes) VALUES ($1, 0, 0);`, [pic]);
-};
+}
 
 function _setLikeToDB(pic){
     return db.none(`UPDATE feedback SET likes = likes + 1 WHERE pic = $1;`, [pic]);
