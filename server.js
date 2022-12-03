@@ -1,12 +1,12 @@
 const express = require('express');
 const prikoli = require('./prikols');
-const app = express();
 const database = require('./database');
+const app = express();
 const port = 80;
 
 
 app.use(express.static(__dirname));
-app.use('/prikoli', express.static('./prikoli'));
+//app.use('/prikoli', express.static('./prikoli'));
 
 app.get('/', (req, res) => res.sendFile(__dirname + "/index.html"));
 
